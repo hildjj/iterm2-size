@@ -1,7 +1,10 @@
 import assert from 'node:assert';
-import {foo} from '../lib/index.js';
+import {getTerminalSize} from '../lib/index.js';
 import test from 'node:test';
 
-test('index', () => {
-  assert.equal(foo(), 2);
+test('index', async() => {
+  const sz = await getTerminalSize();
+  assert(sz);
+  assert.equal(typeof sz.height, 'number');
+  assert.equal(typeof sz.width, 'number');
 });
