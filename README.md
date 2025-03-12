@@ -28,9 +28,11 @@ Full [API documentation](http://hildjj.github.io/iterm2-size/) is available.
 Example:
 
 ```js
-import {getTerminalSize} from '/iterm2-size';
-const {height, width} = await getTerminalSize();
-console.error();
+import {getTerminalSize} from 'iterm2-size';
+
+// Pass in rows/columns adjustments, if desired, to account for prompt height.
+const {width, height} = await getTerminalSize({rows: -2});
+console.error(`${width}x${height}`);
 ```
 
 ## Testing
