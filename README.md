@@ -33,6 +33,7 @@ const {height, width} = await getTerminalSize();
 console.error();
 ```
 
----
-[![Build Status](https://github.com/hildjj/iterm2-size/workflows/Tests/badge.svg)](https://github.com/hildjj/iterm2-size/actions?query=workflow%3ATests)
-[![codecov](https://codecov.io/gh/hildjj/iterm2-size/graph/badge.svg?token=BQQOLQUR3V)](https://codecov.io/gh/hildjj/iterm2-size)
+## Testing
+
+This library is difficult to test on GitHub actions, since GHA doesn't run
+iTerm2.  CI just checks that eslint and typescript are happy.
