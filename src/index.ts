@@ -3,7 +3,14 @@ import fs from 'node:fs';
 import tty from 'node:tty';
 
 export interface Rect {
+  /**
+   * In pixels.
+   */
   width: number;
+
+  /**
+   * In pixels.
+   */
   height: number;
 }
 
@@ -43,7 +50,7 @@ export async function getTerminalSize(): Promise<Rect> {
       ttr.destroy();
       ttw.destroy();
 
-      // Parse result
+      // Parse result.  Only two numbers on older iTerm.
       const [height, width, scale = 1.0] = d
         .subarray(22, -2)
         .toString()
