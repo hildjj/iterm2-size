@@ -7,7 +7,15 @@
     "lib/*"
   ],
   "type": "module",
-  "keywords": [],
+  "keywords": [
+    "iterm",
+    "iterm2",
+    "pixel",
+    "size",
+    "terminal",
+    "width",
+    "height"
+  ],
   "author": "Joe Hildebrand <joe-github@cursive.net>",
   "license": "MIT",
   "repository": {
@@ -35,6 +43,7 @@
     "eslint": "9.22.0",
     "eslint-plugin-jsdoc": "50.6.6",
     "eslint-plugin-markdown": "5.1.0",
+    "jimp": "1.6.0",
     "tsup": "8.4.0",
     "typedoc": "0.27.9",
     "typescript": "5.8.2",

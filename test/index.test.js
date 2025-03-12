@@ -4,7 +4,7 @@ import test from 'node:test';
 
 test('index', async() => {
   try {
-    const sz = await getTerminalSize();
+    const sz = await getTerminalSize({rows: -3});
     assert(sz);
     assert.equal(typeof sz.height, 'number');
     assert.equal(typeof sz.width, 'number');
