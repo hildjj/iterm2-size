@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import {Jimp} from 'jimp';
 import {getTerminalSize} from '../lib/index.js';
 
