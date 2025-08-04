@@ -2,7 +2,7 @@ import assert from 'node:assert';
 import {getTerminalSize} from '../lib/index.js';
 import test from 'node:test';
 
-test('index', async() => {
+test('index', async () => {
   try {
     const sz = await getTerminalSize({rows: -3});
     assert(sz);
