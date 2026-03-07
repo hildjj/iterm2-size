@@ -54,7 +54,7 @@ export async function getTerminalSize(
   const ttw = new tty.WriteStream(write.fd);
 
   return new Promise(resolve => {
-    ttr.on('data', d => {
+    ttr.on('data', (d: Uint8Array) => {
       const {columns, rows} = ttw;
 
       // Resets terminal to cooked mode.  Ignore errors.
